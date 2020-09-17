@@ -65,7 +65,7 @@ const Graph = (props) => {
           ]
         
       }};
-      
+
     return (
         <div className="graph_row-container">
             <div className="graph-section">
@@ -78,7 +78,7 @@ const Graph = (props) => {
           </div>
           <div className="highcharts-container " data-highcharts-chart="0"
                         style={{position: 'relative', overflow: 'hidden', width: '100%',
-                        height: 'auto', textAlign: 'left', lineHeight: 'normal', zIndex: '0',
+                        height: '300px', textAlign: 'left', lineHeight: 'normal', zIndex: '0',
                         WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)'}}>
             {<PieChart highcharts={Highcharts} options={options(graphData)} />}
           </div>

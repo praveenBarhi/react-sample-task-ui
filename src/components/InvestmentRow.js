@@ -17,7 +17,7 @@ const InvestmentRow = (props) => {
 
                         <div className="stock-price">
                             <span>{investment.code}</span>
-                            <h3>${investment.current_cost}</h3>
+                            <h3>${parseFloat(investment.price).toFixed(2)}</h3>
                         </div>
                         <div className="stock-name">
                             <img src={iShareLogo} />
@@ -33,17 +33,17 @@ const InvestmentRow = (props) => {
                     </div>
                     <div className="stock-quantity">
                         <label><FontAwesomeIcon icon={faAt} /> Avg. Cost</label>
-                        <span>${investment.average_cost}</span>
+                        <span>${parseFloat(investment.average_cost).toFixed(2)}</span>
                     </div>
                     <div className="stock-quantity">
                         <label><FontAwesomeIcon icon={faMoneyBillAlt} /> Invested Amt</label>
-                        <span>${investment.invested_amount}</span>
+                        <span>${parseFloat(investment.invested_amount).toFixed(2)}</span>
                     </div>
                 </div>
                 <div className="col-lg-2 col-sm-5 col-12 investment-col pl-2 pr-2">
                     <div className="marketValue">
                         <span className="float-left">Market Value</span>
-                        <span className="float-right">${investment.market_value}</span>
+                        <span className="float-right">${parseFloat(investment.price * investment.quantity).toFixed(2)}</span>
                     </div>
                     <p className="portfolio">% of portfolio value <b className="float-right">{investment.market_percentage}</b></p>
                     <div className="progress mb-1 stock-progress">
